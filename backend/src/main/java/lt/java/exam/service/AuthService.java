@@ -46,7 +46,7 @@ public class AuthService {
             throw new UserNotExistsException("Email not exists");
         }
 
-        Authentication authentication = null;
+        Authentication authentication;
 
         try {
             authentication = authenticationManager.authenticate(

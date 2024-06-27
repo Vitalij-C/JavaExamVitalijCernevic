@@ -16,7 +16,7 @@ public class UserDefault implements ApplicationRunner {
     private final PasswordEncoder passwordEncoder;
 
     @Override
-    public void run(ApplicationArguments args) throws Exception {
+    public void run(ApplicationArguments args) {
         createAdmin();
         createUser();
     }
