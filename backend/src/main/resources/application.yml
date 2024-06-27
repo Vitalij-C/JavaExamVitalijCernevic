@@ -2,7 +2,7 @@ logging:
   level:
     root: WARN
     lt.java.exam: DEBUG
-    org.springframework.security: DEBUG
+    org.springframework.security: WARN
 
 spring:
   jackson:

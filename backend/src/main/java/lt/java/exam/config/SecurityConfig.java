@@ -44,7 +44,8 @@ public class SecurityConfig {
 
                             //User, Admin
                             request.requestMatchers(
-                                    "api/v1/auth"
+                                    "api/v1/auth",
+                                    "api/v1/ad/**"
                             ).hasAnyAuthority("USER", "ADMIN");
 
                             request.anyRequest().authenticated();
