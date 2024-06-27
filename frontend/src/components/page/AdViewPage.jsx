@@ -15,7 +15,7 @@ const AdViewPage = () => {
     const uuid = params.id;
 
     useEffect(() => {
-        let url = "http://localhost:8080/api/v1/ad/" + uuid;
+        const url = "http://localhost:8080/api/v1/ad/" + uuid;
 
         axios
             .get(url,
@@ -29,7 +29,7 @@ const AdViewPage = () => {
             .catch((error) => {
                 console.error('Error: ', error);
 
-                setAds([]);
+                setAd(false);
             })
     }, []);
 
