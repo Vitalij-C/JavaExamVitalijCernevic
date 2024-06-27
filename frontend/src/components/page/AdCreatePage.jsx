@@ -5,9 +5,11 @@ import Footer from "../part/Footer.jsx";
 import {useState} from "react";
 import axios from "axios";
 import {useAuth} from "../context/AuthContext.jsx";
+import {useNavigate} from "react-router-dom";
 
 const adCreatePage = () => {
     const {getUserData, getUserTokenHeader} = useAuth();
+    const navigate = useNavigate();
 
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
@@ -51,7 +53,7 @@ const adCreatePage = () => {
             .then((response) => {
                 console.log(response);
 
-                navigate("/ad/create");
+                navigate("/profile");
             })
             .catch((error) => {
                 console.error('Error: ', error);
